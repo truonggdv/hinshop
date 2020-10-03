@@ -56,7 +56,7 @@ class CartController extends Controller
             ];
             $email = $request->email;
             Mail::send('frontend.pages.cartdone',$dataMail,function($meg) use ($email){
-                $meg->from('truongdv.hqgroup@gmail.com','Leoo Shop');
+                $meg->from('truongdv.hqgroup@gmail.com','Hin Shop');
                 $meg->to($email)->subject('Leoo Shop');
             });
         }
