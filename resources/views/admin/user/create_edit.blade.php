@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="m-grid__item m-grid__item--fluid m-wrapper">
-
+        @role('admin')
         <!-- BEGIN: Subheader -->
         <div class="m-subheader mb-4">
             <div class="d-flex align-items-center">
@@ -83,7 +83,7 @@
                         <div class="form-group m-form__group">
                             <label>Email:</label>
                             <div class="input-group">
-                                <input type="email" name="email" class="form-control m-input" value="{{old('email',isset($data) ? $data->email : null)}}" readonly placeholder="Nhập email..">
+                                <input type="email" name="email" class="form-control m-input" value="{{old('email',isset($data) ? $data->email : null)}}" @if(isset($data)) readonly @endif placeholder="Nhập email..">
                                 <div class="input-group-append"><span class="input-group-text" id="basic-addon2">@gmail.com</span></div>
                             </div>
                         </div>
@@ -186,5 +186,10 @@
 
             };
         </script>
+        @else
+            <div style="width: 100%" class="alert alert-danger text-center" role="alert">
+                <strong>Thông báo !</strong> Bạn không có quyền truy cập vào trang này !
+            </div>
+            @endrole
     </div>
 @stop

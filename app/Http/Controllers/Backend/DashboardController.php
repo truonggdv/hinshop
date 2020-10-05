@@ -24,26 +24,40 @@ class DashboardController extends Controller
 
         $pay1 = Pay::whereDay('created_at', '=', $day)
             ->get();
-            $data1 = json_decode($pay1);
-            $count1 = count($data1);
-        foreach ($data1 as $key => $a) {
-            $b1[$key] = $a->total;
-        }
+        $data1 = json_decode($pay1);
+        $count1 = count($data1);
+        if($count1 == 0){
+            $sum1 = 0;
+        }else{
 
-        $sum1 = array_sum($b1); 
+            foreach ($data1 as $key => $a) {
+                $b1[$key] = $a->total;
+            }
+
+            $sum1 = array_sum($b1);
+
+        }
 
 
 
         $pay = Pay::whereYear('created_at', '=', $year)
             ->whereMonth('created_at', '=', $month)
             ->get();
-            $data = json_decode($pay);
-            $count = count($data);
-        foreach ($data as $key => $a) {
-            $b[$key] = $a->total;
-        }
+        $data = json_decode($pay);
+        $count = count($data);
+        if($count == 0){
 
-        $sum = array_sum($b);
+            $sum = 0;
+
+        }else{
+
+            foreach ($data as $key => $a) {
+                $b[$key] = $a->total;
+            }
+
+            $sum = array_sum($b);
+
+        }
         $order = Pay::whereMonth('created_at', '=', $month)->where('status',0)->count();
         $order_r = Pay::whereMonth('created_at', '=', $month)->where('status',1)->count();
 

@@ -25,8 +25,8 @@ function listCategory($mang, $parentId, $char){
         $string .=  '<div class="item-menu"><span>';
         $string .= $char.$value['name'];
         $string .= '</span>';
-        $string .= '<div class="category-fix">';
-        $string .= '<a class="btn-category btn-primary" href="'.route('categories.edit',[$value['id']]).'"><i class="fa fa-edit"></i></a>';
+        $string .= '<div class="category-fix" style="margin-top: -9px">';
+        $string .= '<a class="btn btn-primary" href="'.route('categories.edit',[$value['id']]).'"><i class="fa fa-edit"></i></a>';
         $string .= '<button type="button" class="btn btn-danger btn-delete" data-toggle="modal" data-target="#exampleModal" data-action="'.route('categories.destroy',[$value['id']]).'"><i class="fas fa-trash-alt"></i></button>';
         $string .="</div>";
         $string .="</div>";

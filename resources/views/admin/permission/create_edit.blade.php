@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="m-grid__item m-grid__item--fluid m-wrapper">
-
+        @role('admin')
         <!-- BEGIN: Subheader -->
         <div class="m-subheader mb-4">
             <div class="d-flex align-items-center">
@@ -105,5 +105,10 @@
 
         </div>
         <!-- END: Subheader -->
+        @else
+            <div style="width: 100%" class="alert alert-danger text-center" role="alert">
+                <strong>Thông báo !</strong> Bạn không có quyền truy cập vào trang này !
+            </div>
+            @endrole
     </div>
 @stop
