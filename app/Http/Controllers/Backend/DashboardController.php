@@ -24,6 +24,7 @@ class DashboardController extends Controller
 
         $pay1 = Pay::whereDay('created_at', '=', $day)
             ->get();
+
         $data1 = json_decode($pay1);
         $count1 = count($data1);
         if($count1 == 0){
@@ -38,11 +39,10 @@ class DashboardController extends Controller
 
         }
 
-
-
         $pay = Pay::whereYear('created_at', '=', $year)
             ->whereMonth('created_at', '=', $month)
             ->get();
+
         $data = json_decode($pay);
         $count = count($data);
         if($count == 0){
@@ -58,6 +58,7 @@ class DashboardController extends Controller
             $sum = array_sum($b);
 
         }
+
         $order = Pay::whereMonth('created_at', '=', $month)->where('status',0)->count();
         $order_r = Pay::whereMonth('created_at', '=', $month)->where('status',1)->count();
 

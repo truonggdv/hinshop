@@ -103,7 +103,11 @@
                             <tr>
                                 <td>{{$data->firstItem() + $key}}</td>
                                 <td>{{$item->title}}</td>
+<<<<<<< HEAD
                                 <td style="width: 20%;"> {!! $item->description !!} </td>
+=======
+                                <td style="width: 20%;"> {!! $item->description !!}</td>
+>>>>>>> 914f89f02efd507c995c81b463a1b8221616fb6a
                                 <td class="text-center">
                                     <img width="150" height="100" src="{{\App\Library\Files::media( $item->image )}}" alt="" />
                                     <p class="mt-2 text-center">Kích thước thật: {{$item->width}} x {{$item->height}}</p>
