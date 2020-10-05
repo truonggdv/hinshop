@@ -88,7 +88,5 @@
       <!-- Your Chat Plugin code -->
       <div class="fb-customerchat"
         attribution=setup_tool
-        page_id="100368618461351"
-  logged_in_greeting="Chào bạn! Chúng tôi giúp gì được cho bạn?"
-  logged_out_greeting="Chào bạn! Chúng tôi giúp gì được cho bạn?">
+        page_id="100368618461351">
       </div>
