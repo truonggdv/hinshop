@@ -61,4 +61,13 @@ class IndexController extends Controller
         return redirect('lien-he')->with('success','Gửi ý kiến đóng góp thành công !');
     }
 
+    public function search(Request $request){
+        $title = $request->search;
+        $search = str_replace(' ','%', $title);
+        $data =  Product::orderBy('id','desc')->where('title','like','%'.$search.'%')->get();
+        $count = count($data);
+        // dd($title,$data,$count);
+        return view('frontend.pages.search',compact('title','data','count'));
+    }
+
 }
