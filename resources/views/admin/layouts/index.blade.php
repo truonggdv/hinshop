@@ -83,7 +83,7 @@
 
         <!-- END: Left Aside -->
 
-        {{--        main--}}
+        {{--main--}}
 
         @yield('content')
 

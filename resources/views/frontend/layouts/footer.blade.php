@@ -9,11 +9,11 @@
                     <p>Chúng tôi luôn nỗ lực sáng tạo những sản phẩm mới để đem lại sự hài lòng cho khách hàng !</p>
                     <p>-- Hin --</p>
                     <div class="footer__payment">
-                        <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
-                        <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
-                        <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
-                        <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
-                        <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                        <a href="/"><img src="img/payment/payment-1.png" alt=""></a>
+                        <a href="/"><img src="img/payment/payment-2.png" alt=""></a>
+                        <a href="/"><img src="img/payment/payment-3.png" alt=""></a>
+                        <a href="/"><img src="img/payment/payment-4.png" alt=""></a>
+                        <a href="/"><img src="img/payment/payment-5.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -21,10 +21,10 @@
                 <div class="footer__widget">
                     <h6>Liên kết nhanh</h6>
                     <ul>
-                        <li><a href="">Về chúng tôi</a></li>
                         <li><a href="/blog">Bài viết</a></li>
                         <li><a href="/lien-he">Liên hệ</a></li>
-                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="/">Câu hỏi thường gặp</a></li>
+                        <li><a href="/chinh-sach">Chính sách đổi trả hàng</a></li>
                     </ul>
                 </div>
             </div>
@@ -32,17 +32,17 @@
                 <div class="footer__widget">
                     <h6>Tài khoản</h6>
                     <ul>
-                        <li><a href="#">Tài khoản của tôi</a></li>
-                        <li><a href="#">Theo dõi đơn hàng</a></li>
-                        <li><a href="index.php?page_layout=checkout">Thanh toán</a></li>
-                        <li><a href="#">Danh sách yêu thích</a></li>
+                        <li><a href="/">Tài khoản của tôi</a></li>
+                        <li><a href="/">Theo dõi đơn hàng</a></li>
+                        <li><a href="/">Thanh toán</a></li>
+                        <li><a href="/">Danh sách yêu thích</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-8 col-sm-8">
                 <div class="footer__newslatter">
                     <h6>Bản tin</h6>
-                    <form action="#">
+                    <form action="/">
                         <input type="text" placeholder="Email">
                         <button type="submit" class="site-btn">Đăng ký</button>
                     </form>

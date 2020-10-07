@@ -17,6 +17,9 @@ Route::group(['namespace' => 'Frontend'], function() {
     Route::get('/','IndexController@getIndex');
     Route::post('search','IndexController@search')->name('search');
     Route::get('san-pham/{slug}','IndexController@details');
+    Route::get('/san-pham','IndexController@product');
+    Route::get('/danh-muc/{slug}','IndexController@category');
+    Route::get('/chinh-sach','IndexController@policy');
     Route::group(['prefix'=>'cart'],function (){
         Route::get('add/{id}','CartController@getAddCart');
         Route::get('show','CartController@getShow');

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Contribute;
-use Illuminate\Support\Facades\Mail;    
+use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
 {
@@ -18,7 +18,7 @@ class IndexController extends Controller
         $hight = Product::inRandomOrder()->paginate(5);
         return view('frontend.pages.index',compact('category','trend','run','hight'));
     }
-    
+
     public function details($slug){
         $data= Product::where('slug',$slug)->first();
         // dd($data);
@@ -42,7 +42,7 @@ class IndexController extends Controller
                 'name'=>$request->name,
                 'email'=>$request->email,
                 'content'=>$request->content,
-    
+
             ];
             $email = $request->email;
             Mail::send('frontend.pages.content',$dataMail,function($meg) use ($email){
@@ -68,6 +68,24 @@ class IndexController extends Controller
         $count = count($data);
         // dd($title,$data,$count);
         return view('frontend.pages.search',compact('title','data','count'));
+    }
+    public function product(){
+        $highlights = Product::inRandomOrder()->paginate(9);
+        $selling = Product::inRandomOrder()->paginate(12);
+        $category = Category::inRandomOrder()->get();
+        return view('frontend.pages.product',compact('highlights','selling','category'));
+    }
+
+    public function category($slug){
+        $slug= Category::where('slug',$slug)->first();
+        $name = $slug->name;
+        $data = Product::where('parent_id',$slug->id)->paginate(12);
+        $category = Category::inRandomOrder()->get();
+        return view('frontend.pages.category',compact('data','category','name'));
+    }
+
+    public function policy(){
+        return view('frontend.pages.policy');
     }
 
 }
