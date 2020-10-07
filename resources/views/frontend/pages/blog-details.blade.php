@@ -63,8 +63,18 @@
                         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=267207311357197&autoLogAppEvents=1" nonce="E0l11Go0"></script>
 
                         <div class="fb-comments" data-href="https://www.facebook.com/Th%C3%ADch-Th%C3%AC-L%E1%BA%ADp-Th%C3%B4i-100368618461351" data-numposts="5" data-width=""></div>
+                        <br>
 
-                        <div class = "fb-like" data-href = "https://www.facebook.com/Th%C3%ADch-Th%C3%AC-L%E1%BA%ADp-Th%C3%B4i- 100368618461351 " data-width = " " data-layout = " standard " data-action = " like " data-size = " large " data-share = " true " > </div>
+                        <div class="fb-like" data-href="https://http://truongdang.online/blog/{{$data->slug}}" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
+                        <div class="fb-share-button" data-href="https://http://truongdang.online/blog/{{$data->slug}}" data-layout="button_count"></div>
+                        <script>
+                        (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) return;
+                                js = d.createElement(s); js.id = id;
+                                js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
                     </div>
                 </div>
             </div>

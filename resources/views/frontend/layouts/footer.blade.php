@@ -6,8 +6,8 @@
                     <div class="footer__logo">
                         <a href="index.php"><img src="img/logo.png" alt=""></a>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        cilisis.</p>
+                    <p>Chúng tôi luôn nỗ lực sáng tạo những sản phẩm mới để đem lại sự hài lòng cho khách hàng !</p>
+                    <p>-- Hin --</p>
                     <div class="footer__payment">
                         <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
                         <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
@@ -21,9 +21,9 @@
                 <div class="footer__widget">
                     <h6>Liên kết nhanh</h6>
                     <ul>
-                        <li><a href="index.php?page_layout=contact">Về chúng tôi</a></li>
-                        <li><a href="index.php?page_layout=blog">Bài viết</a></li>
-                        <li><a href="index.php?page_layout=contact">Liên hệ</a></li>
+                        <li><a href="">Về chúng tôi</a></li>
+                        <li><a href="/blog">Bài viết</a></li>
+                        <li><a href="/lien-he">Liên hệ</a></li>
                         <li><a href="#">Câu hỏi thường gặp</a></li>
                     </ul>
                 </div>
@@ -47,11 +47,10 @@
                         <button type="submit" class="site-btn">Đăng ký</button>
                     </form>
                     <div class="footer__social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a style="font-size:40px;background:none;color:#4267b2" href="https://www.facebook.com/Th%C3%ADch-Th%C3%AC-L%E1%BA%ADp-Th%C3%B4i-100368618461351" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a style="font-size:40px;background:none;color:#e85462" href="https://www.instagram.com/truong.0099/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a style="font-size:40px;background:none;color:#c00" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></i></a>
+                        <a style="font-size:40px;background:none;color:rgb(29 161 242)" href="https://twitter.com/home?lang=vi" target="_blank"><i class="fab fa-twitter-square"></i></i></a>
                     </div>
                 </div>
             </div>
