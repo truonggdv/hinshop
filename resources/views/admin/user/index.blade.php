@@ -53,22 +53,150 @@
                         <table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
                             <thead>
                             <tr>
-                                <th>STT</th>
-                                <th>Họ tên</th>
+                                <th style="width:5%">STT</th>
+                                <th style="width:20%">Họ tên</th>
                                 <th>Email</th>
-                                <th>Level</th>
                                 <th>Hành động</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($data as $key => $item)
+                            <br>
+                            <h4>Danh sách Admin hệ thống</h4>
+                            <br>
+                            @foreach($data_admin as $key => $item)
                             <tr>
-                                <th scope="row">{{$data->firstItem() + $key}}</th>
+                                <th scope="row"> {{$item->id}} </th>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->email}}</td>
-                                <td><span class="m-badge m-badge--danger m-badge--wide"></span></td>
                                 <td style="width: 15%;">
-                                    <a href="#" class="btn btn-warning"><i class="fas fa-eye"></i></a>
+                                    <a href="{{route('user.edit',[$item->id])}}" class="btn btn-success"><i class="fas fa-edit"></i></a>
+                                    <button type="button" class="btn btn-danger btn-delete" data-toggle="modal" data-target="#exampleModal" data-action="{{route('user.destroy',[$item->id])}}">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            @endforeach
+                            </tbody>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">XÓA THÀNH VIÊN</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Bạn có muốn xóa?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <form id="form-delete" role="form" method="POST" enctype="multipart/form-data" action="">
+                                                {{csrf_field()}}
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Xóa</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                $(document).ready(function(){
+
+                                    $('#exampleModal').on('show.bs.modal', function(e) {
+                                        var action=$( e.relatedTarget).data('action');
+                                        $('#form-delete').attr('action',action );
+                                    });
+
+                                });
+
+                            </script>
+                        </table>
+                        <br>
+                        <hr>
+                        <table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
+                            <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th style="width:20%">Họ tên</th>
+                                <th>Email</th>
+                                <th>Hành động</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <br>
+                            <h4>Danh sách thành viên hệ thống</h4>
+                            <br>
+                            @foreach($data_member as $key => $item)
+                            <tr>
+                                <th scope="row" style="width:5%"> {{$item->id}} </th>
+                                <td>{{$item->name}}</td>
+                                <td>{{$item->email}}</td>
+                                <td style="width: 15%;">
+                                    <a href="{{route('user.edit',[$item->id])}}" class="btn btn-success"><i class="fas fa-edit"></i></a>
+                                    <button type="button" class="btn btn-danger btn-delete" data-toggle="modal" data-target="#exampleModal" data-action="{{route('user.destroy',[$item->id])}}">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            @endforeach
+                            </tbody>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">XÓA THÀNH VIÊN</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Bạn có muốn xóa?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <form id="form-delete" role="form" method="POST" enctype="multipart/form-data" action="">
+                                                {{csrf_field()}}
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Xóa</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                $(document).ready(function(){
+
+                                    $('#exampleModal').on('show.bs.modal', function(e) {
+                                        var action=$( e.relatedTarget).data('action');
+                                        $('#form-delete').attr('action',action );
+                                    });
+
+                                });
+
+                            </script>
+                        </table>
+                        <br>
+                        <hr>
+                        <table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
+                            <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th style="width:20%">Họ tên</th>
+                                <th>Email</th>
+                                <th>Hành động</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <br>
+                            <h4>Tất cả thành viên</h4>
+                            <br>
+                            @foreach($data as $key => $item)
+                            <tr>
+                                <th scope="row" style="width:5%"> {{$item->id}} </th>
+                                <td>{{$item->name}}</td>
+                                <td>{{$item->email}}</td>
+                                <td style="width: 15%;">
                                     <a href="{{route('user.edit',[$item->id])}}" class="btn btn-success"><i class="fas fa-edit"></i></a>
                                     <button type="button" class="btn btn-danger btn-delete" data-toggle="modal" data-target="#exampleModal" data-action="{{route('user.destroy',[$item->id])}}">
                                         <i class="fas fa-trash-alt"></i>

@@ -55,6 +55,7 @@
 <!-- end::Head -->
 
 <!-- begin::Body -->
+@hasanyrole('admin|memmber')
 <body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
 
 <!-- begin:: Page -->
@@ -150,6 +151,12 @@
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 <!--end::Page Scripts -->
 </body>
+@else
+<div style="width: 100%" class="alert alert-danger text-center" role="alert">
+                <strong>Thông báo !</strong> Bạn không có quyền truy cập hệ thống, vui lòng liên hệ Người quản lí để cấp quyền truy cập !
+            </div>
+    
+@endhasanyrole
 
 <!-- end::Body -->
 </html>
