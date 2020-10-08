@@ -6,7 +6,7 @@
             <div class="m-stack__item m-brand  m-brand--skin-dark ">
                 <div class="m-stack m-stack--ver m-stack--general">
                     <div class="m-stack__item m-stack__item--middle m-brand__logo">
-                        <h5><a class="text-center" style="color: #fff; font-family: 'Roboto', sans-serif" href="">Hin Shop</a></h5>
+                        <h5><a class="text-center" style="color: #fff; font-family: 'Roboto', sans-serif" href=" {{url('/admin/dashboard')}} ">Hin Shop</a></h5>
                     </div>
                     <div class="m-stack__item m-stack__item--middle m-brand__tools">
 

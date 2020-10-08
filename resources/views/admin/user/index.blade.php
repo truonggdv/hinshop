@@ -189,7 +189,7 @@
                             </thead>
                             <tbody>
                             <br>
-                            <h4>Tất cả thành viên</h4>
+                            <h4>Danh sách tài khoản chờ xét duyệt</h4>
                             <br>
                             @foreach($data as $key => $item)
                             <tr>

@@ -197,7 +197,7 @@
 
                                 <!--Begin::Timeline 3 -->
                                 <div class="m-timeline-3">
-                                    <div style="overflow-y: scroll; height:450px" class="m-timeline-3__items">
+                                    <div style="overflow-y: scroll; height:600px" class="m-timeline-3__items">
                                         @foreach($product as $key => $item)
                                         <div class="m-timeline-3__item m-timeline-3__item--info">
                                             <span class="m-timeline-3__item-time">{{date('H:i', strtotime($item->updated_at))}}</span>
@@ -222,7 +222,7 @@
 
                                 <!--Begin::Timeline 3 -->
                                 <div class="m-timeline-3">
-                                    <div style="overflow-y: scroll; height:450px" class="m-timeline-3__items">
+                                    <div style="overflow-y: scroll; height:600px" class="m-timeline-3__items">
                                         @foreach($news as $item)
                                         <div class="m-timeline-3__item m-timeline-3__item--danger">
                                             <span class="m-timeline-3__item-time m--font-warning">{{date('H:i', strtotime($item->updated_at))}}</span>

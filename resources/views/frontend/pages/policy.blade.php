@@ -47,7 +47,7 @@
             <p>+ Chính sách đổi hàng không áp dụng với các sản phẩm trong những chương trình khuyến mãi.</p>
             <p>+ Nếu KH đổi sang hóa đơn có giá tiền thấp hơn, Asihon sẽ không thực hiện hoàn tiền lại cho Qúy khách.</p>
             <p>+ Nếu KH đổi sang hóa đơn có giá tiền cao hơn, vui lòng thanh toán thêm cho Asihon khoản tiền chênh lệch.</p>
-            <p>+ Khi EMWEAR nhận được sản phẩm đổi từ KH, Asihon sẽ kiểm tra và tiến hành đổi sản phẩm mới, gửi hàng lại cho Qúy khách.</p>
+            <p>+ Khi Asihon nhận được sản phẩm đổi từ KH, Asihon sẽ kiểm tra và tiến hành đổi sản phẩm mới, gửi hàng lại cho Qúy khách.</p>
         </div>
     </section>
     <!-- Contact Section End -->

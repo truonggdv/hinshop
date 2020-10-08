@@ -108,7 +108,7 @@
                                     @if(isset($item->sale))
                                         <div class="label sale">Giảm giá</div>
                                         @else
-                                        <div style="background: #e3c01c" class="label">Nổi bật</div>
+                                        <div style="background: #e3c01c" class="label">Hot</div>
                                         @endif
                                     <ul class="product__hover">
                                         <li><a href="{{\App\Library\Files::media( $item->image )}}" class="image-popup"><span class="arrow_expand"></span></a></li>

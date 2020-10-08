@@ -59,7 +59,7 @@
             <div class="col-lg-12">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 <div class="footer__copyright__text">
-                    <p>Bản quyền &copy; <script>document.write(new Date().getFullYear());</script>- Thiết kế bởi Trường Dev <a href="https://hqgroups.vn" target="_blank">HQ Group</a> <i class="fa fa-heart" aria-hidden="true"></i></p>
+                    <p>Bản quyền &copy; <script>document.write(new Date().getFullYear());</script> - Thiết kế bởi Trường Dev <a href="https://hqgroups.vn" target="_blank">HQ Group</a> <i class="fa fa-heart" aria-hidden="true"></i></p>
                 </div>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </div>

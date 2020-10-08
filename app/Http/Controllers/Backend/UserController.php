@@ -21,7 +21,7 @@ class UserController extends Controller
         // $data = User::orderBy('id','desc')->paginate(10);
         $data_admin = User::role('admin')->orderBy('id','desc')->get();
         $data_member = User::role('member')->orderBy('id','desc')->get();
-        $data = User::orderBy('id','desc')->get();
+        $data = User::doesntHave('roles')->orderBy('id','desc')->get();
         return view('admin.user.index',compact('data_member','data_admin','data'));
     }
 
