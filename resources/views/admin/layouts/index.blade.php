@@ -153,9 +153,21 @@
 </body>
 @else
 <div style="width: 100%" class="alert alert-danger text-center" role="alert">
-                <strong>Thông báo !</strong> Bạn không có quyền truy cập hệ thống, vui lòng liên hệ Người quản lí để cấp quyền truy cập !
-            </div>
-    
+    <strong>Thông báo !</strong> Cảm ơn bạn đã đăng kí tài khoản, vui lòng liên hệ Người quản lí để cấp quyền truy cập !
+</div>
+<div style="text-align: center" class="m-nav__item">
+    {{--                                                        <a href="snippets/pages/user/login-1.html" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">Đăng xuất</a>--}}
+    <a class="btn m-btn--pill btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder" href="{{ route('logout') }}"
+       onclick="event.preventDefault();
+       document.getElementById('logout-form').submit();">
+        Thoát
+    </a>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+</div>
+
+
 @endhasanyrole
 
 <!-- end::Body -->
