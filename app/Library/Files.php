@@ -115,32 +115,16 @@ class Files
             if ($width || $height) {
                 $w = $width? $width: null;
                 $h = $height? $height: null;
-                $image  = Image::make($file->getRealPath());
-//                if ($img->width() > $w) {
-//                    $img->resize($w, $height, function ($constraint) {
-//                        $constraint->aspectRatio();
-//                    })->save($temp,100);
-//                }
-//            }
-//            else{
-//
-//                $img = Image::make($file->getRealPath())->save($temp,100);
-                if($w/$h < $image->width()/$image->height()){ /*resize theo width*/
-                    $image->resize($w, null, function ($constraint) {
+                $img = Image::make($file->getRealPath());
+                if ($img->width() > $w) {
+                    $img->resize($w, $height, function ($constraint) {
                         $constraint->aspectRatio();
-                    });
-                    $background = Image::canvas($width, $h);
-                    $background->fill('#fff');
-                    $background->insert($image, 'center')->save($temp,100);
-                }else{
-//                    resize theo hegiht
-                    $image->resize(null, $h, function ($constraint) {
-                        $constraint->aspectRatio();
-                    });
-                    $background = Image::canvas($w, $h);
-                    $background->fill('#fff');
-                    $background->insert($image, 'center')->save($temp,100);
+                    })->save($temp,80);
                 }
+            }
+            else{
+
+                $img = Image::make($file->getRealPath())->save($temp,80);
 
             }
 
