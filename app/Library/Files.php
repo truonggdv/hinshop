@@ -119,12 +119,12 @@ class Files
                 if ($img->width() > $w) {
                     $img->resize($w, $height, function ($constraint) {
                         $constraint->aspectRatio();
-                    })->save($temp,80);
+                    })->save($temp,100);
                 }
             }
             else{
 
-                $img = Image::make($file->getRealPath())->save($temp,80);
+                $img = Image::make($file->getRealPath())->save($temp,100);
 
             }
 

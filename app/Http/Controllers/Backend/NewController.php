@@ -91,10 +91,10 @@ class NewController extends Controller
     {
         $input = $request->all();
         if($request->file('image')){
-            $input['image']=Files::upload_image($request->file('image'),'news',null,350,500);
+            $input['image']=Files::upload_image($request->file('image'),'news',null,500,350);
         }
         if($request->file('image_extension')){
-            $input['image_extension']=Files::upload_image($request->file('image_extension'),'news',null,450,600);
+            $input['image_extension']=Files::upload_image($request->file('image_extension'),'news',null,600,450);
         }
         $input['slug'] = Str::slug($request->title.self::rand_string(10) . '_' . time());
         $input['author'] = Auth::user()->name;
