@@ -259,7 +259,7 @@
                     <div class="m-portlet__body">
                         <div class="m-widget19">
                             <div class="m-widget19__pic m-portlet-fit--top m-portlet-fit--sides" style="min-height-: 286px">
-                                <img src="{{\App\Library\Files::media( $new->image )}}" alt="">
+                                <img src="{{\App\Library\Files::media( $new->image_extension )}}" alt="">
                                 <h3 class="m-widget19__title m--font-light">
                                     {{ $new->title }}
                                 </h3>
