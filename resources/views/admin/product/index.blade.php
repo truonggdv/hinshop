@@ -162,31 +162,31 @@
                                     });
                                 });
 
-                                $(document).ready(function(){
+                                // $(document).ready(function(){
 
-                                    $('#search').keyup(function(){
-                                        var query = $(this).val();
-                                        if(query != '')
-                                        {
-                                            var _token = $('input[name="_token"]').val();
-                                            $.ajax({
-                                                url:"{{ route('search') }}",
-                                                method:"POST",
-                                                data:{query:query, _token:_token},
-                                                success:function(data){
-                                                    $('#list-item').fadeIn();
-                                                    $('#list-item').html(data);
-                                                }
-                                            });
-                                        }
-                                    });
+                                //     $('#search').keyup(function(){
+                                //         var query = $(this).val();
+                                //         if(query != '')
+                                //         {
+                                //             var _token = $('input[name="_token"]').val();
+                                //             $.ajax({
+                                //                 url:"{{ route('search') }}",
+                                //                 method:"POST",
+                                //                 data:{query:query, _token:_token},
+                                //                 success:function(data){
+                                //                     $('#list-item').fadeIn();
+                                //                     $('#list-item').html(data);
+                                //                 }
+                                //             });
+                                //         }
+                                //     });
 
-                                    $(document).on('click', 'li', function(){
-                                        $('#search').val($(this).text());
-                                        $('#list-item').fadeOut();
-                                    });
+                                //     $(document).on('click', 'li', function(){
+                                //         $('#search').val($(this).text());
+                                //         $('#list-item').fadeOut();
+                                //     });
 
-                                });
+                                // });
 
                                 $(document).ready( function () {
                                     $('#table_id').DataTable();
